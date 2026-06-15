@@ -42,7 +42,7 @@ import com.example.ui.theme.*
 import com.example.viewmodel.MainViewModel
 import kotlinx.coroutines.delay
 
-@OptIn(UnstableApi::class, ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WatchScreen(
     animeId: String,
