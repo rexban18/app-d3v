@@ -1,8 +1,9 @@
 package com.example.ui.screens
 
-import android.view.LayoutInflater
-import android.view.ViewGroup
-import android.widget.FrameLayout
+import android.annotation.SuppressLint
+import android.webkit.WebChromeClient
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.widget.Toast
 import com.example.R
 import kotlin.OptIn
@@ -32,10 +33,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
-import androidx.media3.common.MediaItem
-import androidx.media3.common.util.UnstableApi
-import androidx.media3.exoplayer.ExoPlayer
-import androidx.media3.ui.PlayerView
 import com.example.model.Anime
 import com.example.model.Episode
 import com.example.ui.components.EpisodeCard
@@ -368,7 +365,7 @@ fun WatchScreen(
     }
 }
 
-@OptIn(UnstableApi::class)
+@SuppressLint("SetJavaScriptEnabled")
 @Composable
 fun VideoPlayerFrame(
     videoUrl: String,
@@ -376,46 +373,32 @@ fun VideoPlayerFrame(
 ) {
     val context = LocalContext.current
 
-    val exoPlayer = remember {
-        ExoPlayer.Builder(context).build().apply {
-            setMediaItem(MediaItem.fromUri(videoUrl))
-            prepare()
-            playWhenReady = true
-        }
-    }
-
-    // Capture ticking current progress loops
-    LaunchedEffect(exoPlayer) {
-        while (true) {
-            delay(3000)
-            val currentPos = exoPlayer.currentPosition
-            val totalDuration = exoPlayer.duration
-            if (totalDuration > 0) {
-                val percentage = ((currentPos * 100) / totalDuration).toInt()
-                onProgressUpdate(percentage.coerceIn(0, 100))
+    // Convert Dailymotion/Rumble embed URLs to direct embed pages
+    val embedUrl = remember(videoUrl) {
+        when {
+            videoUrl.contains("dailymotion.com") -> {
+                val videoId = videoUrl.substringAfter("video=").substringBefore("&")
+                "https://www.dailymotion.com/embed/video/$videoId?autoplay=1"
             }
-        }
-    }
-
-    DisposableEffect(videoUrl) {
-        exoPlayer.setMediaItem(MediaItem.fromUri(videoUrl))
-        exoPlayer.prepare()
-        exoPlayer.playWhenReady = true
-        onDispose {
-            // release exoPlayer instance
-        }
-    }
-
-    DisposableEffect(Unit) {
-        onDispose {
-            exoPlayer.release()
+            videoUrl.contains("rumble.com") -> {
+                videoUrl + "&autoplay=1"
+            }
+            else -> videoUrl
         }
     }
 
     AndroidView(
         factory = { ctx ->
-            (LayoutInflater.from(ctx).inflate(R.layout.player_view, null) as PlayerView).apply {
-                player = exoPlayer
+            WebView(ctx).apply {
+                settings.javaScriptEnabled = true
+                settings.domStorageEnabled = true
+                settings.loadWithOverviewMode = true
+                settings.useWideViewPort = true
+                settings.allowContentAccess = true
+                settings.mediaPlaybackRequiresUserGesture = false
+                webChromeClient = WebChromeClient()
+                webViewClient = WebViewClient()
+                loadUrl(embedUrl)
             }
         },
         modifier = Modifier

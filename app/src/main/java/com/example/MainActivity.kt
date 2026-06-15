@@ -251,26 +251,26 @@ fun MainScaffoldScreen(
                         onClick = { selectedTab = "home" }
                     )
                     BottomNavTabItem(
-                        icon = Icons.Default.PlayArrow,
-                        label = "ANIME",
-                        isSelected = selectedTab == "animeList",
-                        onClick = { selectedTab = "animeList" }
-                    )
-                    BottomNavTabItem(
                         icon = Icons.Default.Search,
                         label = "SEARCH",
                         isSelected = selectedTab == "search",
                         onClick = { selectedTab = "search" }
                     )
                     BottomNavTabItem(
-                        icon = Icons.Default.Star,
-                        label = "PREM",
-                        isSelected = selectedTab == "premium",
-                        onClick = { selectedTab = "premium" }
+                        icon = Icons.Default.List,
+                        label = "CATEGORY",
+                        isSelected = selectedTab == "animeList",
+                        onClick = { selectedTab = "animeList" }
+                    )
+                    BottomNavTabItem(
+                        icon = Icons.Default.Favorite,
+                        label = "FAV",
+                        isSelected = selectedTab == "favorites",
+                        onClick = { selectedTab = "favorites" }
                     )
                     BottomNavTabItem(
                         icon = Icons.Default.Person,
-                        label = "PROFIL",
+                        label = "PROFILE",
                         isSelected = selectedTab == "profile",
                         onClick = { selectedTab = "profile" }
                     )
@@ -290,25 +290,27 @@ fun MainScaffoldScreen(
                     onNavigateToDetail = onNavigateToDetail,
                     onNavigateToWatch = onNavigateToWatch,
                     onNavigateToProfile = { selectedTab = "profile" },
-                    onNavigateToPremium = { selectedTab = "premium" }
+                    onNavigateToPremium = { selectedTab = "profile" }
+                )
+                "search" -> SearchScreen(
+                    viewModel = viewModel,
+                    onNavigateToDetail = onNavigateToDetail
                 )
                 "animeList" -> AnimeListScreen(
                     viewModel = viewModel,
                     onNavigateToDetail = onNavigateToDetail,
                     onTriggerSearchTab = { selectedTab = "search" }
                 )
-                "search" -> SearchScreen(
+                "favorites" -> ProfileScreen(
                     viewModel = viewModel,
-                    onNavigateToDetail = onNavigateToDetail
-                )
-                "premium" -> PremiumScreen(
-                    viewModel = viewModel,
-                    onNavigateToRedeemUrl = onNavigateToRedeem
+                    onNavigateToRedeemUrl = onNavigateToRedeem,
+                    onNavigateToPremiumUrl = { selectedTab = "profile" },
+                    onNavigateBackToAuth = onNavigateBackToAuth
                 )
                 "profile" -> ProfileScreen(
                     viewModel = viewModel,
                     onNavigateToRedeemUrl = onNavigateToRedeem,
-                    onNavigateToPremiumUrl = { selectedTab = "premium" },
+                    onNavigateToPremiumUrl = { selectedTab = "profile" },
                     onNavigateBackToAuth = onNavigateBackToAuth
                 )
             }

@@ -1,3 +1,7 @@
+package com.example.repository
+
+object SeedData {
+    val animeJson: String = """
 [
   {
     "animeId": "btth",
@@ -205,3 +209,5 @@
     ]
   }
 ]
+"""
+}

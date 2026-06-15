@@ -354,9 +354,8 @@ class AnimeRepositoryImpl(private val context: Context) : AnimeRepository {
             dao.clearAnimes()
             dao.clearEpisodes()
 
-            // Read JSON from assets
-            val jsonString = context.assets.open("anime_data.json").bufferedReader().use { it.readText() }
-            val rootArray = org.json.JSONArray(jsonString)
+            // Read JSON from embedded seed data (Room/SQLite database)
+            val rootArray = org.json.JSONArray(SeedData.animeJson)
 
             for (i in 0 until rootArray.length()) {
                 val animeObj = rootArray.getJSONObject(i)
