@@ -46,6 +46,7 @@ import kotlinx.coroutines.launch
 fun HomeScreen(
     viewModel: MainViewModel,
     onNavigateToDetail: (animeId: String) -> Unit,
+    onNavigateToWatch: (animeId: String, epId: String) -> Unit,
     onNavigateToProfile: () -> Unit,
     onNavigateToPremium: () -> Unit
 ) {
@@ -330,7 +331,7 @@ fun HomeScreen(
                             anime = matchingAnime,
                             progress = history.progressPercentage,
                             epNum = history.epNumber,
-                            onClick = { onNavigateToDetail(history.animeId) }
+                            onClick = { onNavigateToWatch(history.animeId, history.epId) }
                         )
                     }
                 }

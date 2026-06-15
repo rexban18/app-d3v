@@ -144,7 +144,10 @@ fun MainAppNavigation(viewModel: MainViewModel) {
             MainScaffoldScreen(
                 viewModel = viewModel,
                 onNavigateToDetail = { animeId ->
-                    navController.navigate("animeDetail/$animeId")
+                    navController.navigate("watch/$animeId/${animeId}_ep_1")
+                },
+                onNavigateToWatch = { animeId, epId ->
+                    navController.navigate("watch/$animeId/$epId")
                 },
                 onNavigateToRedeem = {
                     navController.navigate("redeem")
@@ -213,6 +216,7 @@ fun MainAppNavigation(viewModel: MainViewModel) {
 fun MainScaffoldScreen(
     viewModel: MainViewModel,
     onNavigateToDetail: (animeId: String) -> Unit,
+    onNavigateToWatch: (animeId: String, epId: String) -> Unit,
     onNavigateToRedeem: () -> Unit,
     onNavigateBackToAuth: () -> Unit
 ) {
@@ -284,6 +288,7 @@ fun MainScaffoldScreen(
                 "home" -> HomeScreen(
                     viewModel = viewModel,
                     onNavigateToDetail = onNavigateToDetail,
+                    onNavigateToWatch = onNavigateToWatch,
                     onNavigateToProfile = { selectedTab = "profile" },
                     onNavigateToPremium = { selectedTab = "premium" }
                 )

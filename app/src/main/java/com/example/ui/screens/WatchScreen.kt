@@ -1,8 +1,10 @@
 package com.example.ui.screens
 
+import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.Toast
+import com.example.R
 import kotlin.OptIn
 import androidx.compose.animation.*
 import androidx.compose.foundation.background
@@ -412,21 +414,14 @@ fun VideoPlayerFrame(
 
     AndroidView(
         factory = { ctx ->
-            PlayerView(ctx).apply {
+            (LayoutInflater.from(ctx).inflate(R.layout.player_view, null) as PlayerView).apply {
                 player = exoPlayer
-                useController = true
-                layoutParams = FrameLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT,
-                    200
-                )
             }
         },
         modifier = Modifier
             .fillMaxWidth()
             .height(230.dp)
-            .padding(horizontal = 16.dp)
-            .clip(RoundedCornerShape(12.dp))
+            .clip(RoundedCornerShape(bottomStart = 20.dp, bottomEnd = 20.dp))
             .background(Color.Black)
-            .border(1.dp, BorderColor, RoundedCornerShape(12.dp))
     )
 }
