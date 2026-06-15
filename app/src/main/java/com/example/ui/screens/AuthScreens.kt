@@ -122,7 +122,7 @@ fun LoginScreen(
                     Text(
                         text = "COSMIC STREAMING ARCHIVE",
                         color = TextMuted,
-                        fontSize = 10.sp,
+                        fontSize = 14.sp,
                         fontFamily = SpaceMonoFamily,
                         fontWeight = FontWeight.Medium,
                         letterSpacing = 1.5.sp
@@ -134,7 +134,7 @@ fun LoginScreen(
                     OutlinedTextField(
                         value = email,
                         onValueChange = { email = it },
-                        label = { Text("Email Address", color = TextMuted, fontSize = 12.sp, fontFamily = SpaceMonoFamily) },
+                        label = { Text("Email Address", color = TextMuted, fontSize = 16.sp, fontFamily = SpaceMonoFamily) },
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(12.dp),
                         colors = OutlinedTextFieldDefaults.colors(
@@ -155,7 +155,7 @@ fun LoginScreen(
                     OutlinedTextField(
                         value = password,
                         onValueChange = { password = it },
-                        label = { Text("Password", color = TextMuted, fontSize = 12.sp, fontFamily = SpaceMonoFamily) },
+                        label = { Text("Password", color = TextMuted, fontSize = 16.sp, fontFamily = SpaceMonoFamily) },
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(12.dp),
                         colors = OutlinedTextFieldDefaults.colors(
@@ -173,7 +173,7 @@ fun LoginScreen(
                             Text(
                                 text = iconLabel,
                                 color = AccentGlow,
-                                fontSize = 11.sp,
+                                fontSize = 15.sp,
                                 fontFamily = SpaceMonoFamily,
                                 fontWeight = FontWeight.Bold,
                                 modifier = Modifier
@@ -195,7 +195,7 @@ fun LoginScreen(
                         Text(
                             text = "Forgot Password?",
                             color = TextMuted,
-                            fontSize = 11.sp,
+                            fontSize = 15.sp,
                             fontFamily = SpaceMonoFamily,
                             textDecoration = TextDecoration.Underline,
                             modifier = Modifier
@@ -238,7 +238,7 @@ fun LoginScreen(
                         Text(
                             text = "OR",
                             color = TextMuted,
-                            fontSize = 11.sp,
+                            fontSize = 15.sp,
                             fontFamily = SpaceMonoFamily,
                             modifier = Modifier.padding(horizontal = 14.dp)
                         )
@@ -275,7 +275,7 @@ fun LoginScreen(
                             Text(
                                 text = "LOGIN WITH GOOGLE",
                                 fontWeight = FontWeight.Bold,
-                                fontSize = 12.sp,
+                                fontSize = 16.sp,
                                 fontFamily = SpaceMonoFamily
                             )
                         }
@@ -291,12 +291,12 @@ fun LoginScreen(
                         Text(
                             text = "New here? ",
                             color = TextMuted,
-                            fontSize = 13.sp
+                            fontSize = 17.sp
                         )
                         Text(
                             text = "Register",
                             color = AccentGlow,
-                            fontSize = 13.sp,
+                            fontSize = 17.sp,
                             fontFamily = SpaceMonoFamily,
                             fontWeight = FontWeight.Bold,
                             textDecoration = TextDecoration.Underline,
@@ -400,7 +400,7 @@ fun RegisterScreen(
                     Text(
                         text = "JOIN THE STREAMING EMPIRE",
                         color = TextMuted,
-                        fontSize = 10.sp,
+                        fontSize = 14.sp,
                         fontFamily = SpaceMonoFamily,
                         letterSpacing = 1.sp
                     )
@@ -411,7 +411,7 @@ fun RegisterScreen(
                     OutlinedTextField(
                         value = fullName,
                         onValueChange = { fullName = it },
-                        label = { Text("Full Name", color = TextMuted, fontSize = 12.sp, fontFamily = SpaceMonoFamily) },
+                        label = { Text("Full Name", color = TextMuted, fontSize = 16.sp, fontFamily = SpaceMonoFamily) },
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(12.dp),
                         colors = OutlinedTextFieldDefaults.colors(
@@ -431,7 +431,7 @@ fun RegisterScreen(
                     OutlinedTextField(
                         value = email,
                         onValueChange = { email = it },
-                        label = { Text("Email Address", color = TextMuted, fontSize = 12.sp, fontFamily = SpaceMonoFamily) },
+                        label = { Text("Email Address", color = TextMuted, fontSize = 16.sp, fontFamily = SpaceMonoFamily) },
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(12.dp),
                         colors = OutlinedTextFieldDefaults.colors(
@@ -452,7 +452,7 @@ fun RegisterScreen(
                     OutlinedTextField(
                         value = password,
                         onValueChange = { password = it },
-                        label = { Text("Password", color = TextMuted, fontSize = 12.sp, fontFamily = SpaceMonoFamily) },
+                        label = { Text("Password", color = TextMuted, fontSize = 16.sp, fontFamily = SpaceMonoFamily) },
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(12.dp),
                         colors = OutlinedTextFieldDefaults.colors(
@@ -470,7 +470,7 @@ fun RegisterScreen(
                             Text(
                                 text = iconLabel,
                                 color = AccentGlow,
-                                fontSize = 11.sp,
+                                fontSize = 15.sp,
                                 fontFamily = SpaceMonoFamily,
                                 fontWeight = FontWeight.Bold,
                                 modifier = Modifier
@@ -488,7 +488,7 @@ fun RegisterScreen(
                     OutlinedTextField(
                         value = confirmPassword,
                         onValueChange = { confirmPassword = it },
-                        label = { Text("Confirm Password", color = TextMuted, fontSize = 12.sp, fontFamily = SpaceMonoFamily) },
+                        label = { Text("Confirm Password", color = TextMuted, fontSize = 16.sp, fontFamily = SpaceMonoFamily) },
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(12.dp),
                         colors = OutlinedTextFieldDefaults.colors(
@@ -523,7 +523,7 @@ fun RegisterScreen(
                         Text(
                             text = "Accept terms and conditions",
                             color = TextPrimary,
-                            fontSize = 11.sp,
+                            fontSize = 15.sp,
                             fontFamily = SpaceMonoFamily,
                             modifier = Modifier.clickable { termsAccepted = !termsAccepted }
                         )
@@ -565,12 +565,12 @@ fun RegisterScreen(
                         Text(
                             text = "Already registered? ",
                             color = TextMuted,
-                            fontSize = 13.sp
+                            fontSize = 17.sp
                         )
                         Text(
                             text = "Login",
                             color = AccentGlow,
-                            fontSize = 13.sp,
+                            fontSize = 17.sp,
                             fontFamily = SpaceMonoFamily,
                             fontWeight = FontWeight.Bold,
                             textDecoration = TextDecoration.Underline,

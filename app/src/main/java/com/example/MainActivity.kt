@@ -236,8 +236,8 @@ fun MainScaffoldScreen(
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(65.dp)
-                        .clip(RoundedCornerShape(30.dp))
+                        .height(72.dp)
+                        .clip(RoundedCornerShape(36.dp))
                         .background(BackgroundCard.copy(alpha = 0.85f))
                         .border(1.dp, Color.White.copy(alpha = 0.12f), RoundedCornerShape(30.dp))
                         .padding(horizontal = 10.dp),
@@ -332,11 +332,11 @@ fun BottomNavTabItem(
 
     Column(
         modifier = Modifier
-            .width(55.dp)
+            .width(65.dp)
             .graphicsLayer(scaleX = scaleFactor, scaleY = scaleFactor)
             .clip(CircleShape)
             .clickable { onClick() }
-            .padding(vertical = 4.dp),
+            .padding(vertical = 6.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
@@ -344,13 +344,13 @@ fun BottomNavTabItem(
             imageVector = icon,
             contentDescription = label,
             tint = colorAccent,
-            modifier = Modifier.size(20.dp)
+            modifier = Modifier.size(24.dp)
         )
-        Spacer(modifier = Modifier.height(2.dp))
+        Spacer(modifier = Modifier.height(4.dp))
         Text(
             text = label,
             color = colorAccent,
-            fontSize = 9.sp,
+            fontSize = 11.sp,
             fontFamily = SpaceMonoFamily,
             fontWeight = FontWeight.Bold
         )

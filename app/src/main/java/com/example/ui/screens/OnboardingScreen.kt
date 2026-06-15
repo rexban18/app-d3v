@@ -56,7 +56,7 @@ fun OnboardingScreen(
                 Text(
                     text = "SKIP",
                     color = TextMuted,
-                    fontSize = 13.sp,
+                    fontSize = 17.sp,
                     fontFamily = SpaceMonoFamily,
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier
@@ -110,7 +110,7 @@ fun OnboardingScreen(
                                             .border(1.dp, Color.White.copy(alpha = 0.2f), RoundedCornerShape(8.dp)),
                                         contentAlignment = Alignment.Center
                                     ) {
-                                        Text("< VIDEO PLAYER >", color = AccentGlow, fontSize = 10.sp, fontFamily = SpaceMonoFamily)
+                                        Text("< VIDEO PLAYER >", color = AccentGlow, fontSize = 14.sp, fontFamily = SpaceMonoFamily)
                                     }
                                     Spacer(modifier = Modifier.height(16.dp))
                                     Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -152,7 +152,7 @@ fun OnboardingScreen(
                                 Text(
                                     text = "PREMIUM FEATURES",
                                     color = PremiumGold,
-                                    fontSize = 12.sp,
+                                    fontSize = 16.sp,
                                     fontWeight = FontWeight.Bold,
                                     fontFamily = SpaceMonoFamily,
                                     modifier = Modifier.padding(bottom = 12.dp)
@@ -178,7 +178,7 @@ fun OnboardingScreen(
                                         Text(
                                             text = feature,
                                             color = TextPrimary,
-                                            fontSize = 13.sp,
+                                            fontSize = 17.sp,
                                             fontWeight = FontWeight.Medium
                                         )
                                     }
@@ -227,7 +227,7 @@ fun OnboardingScreen(
                                     Text(
                                         text = "CREATING THE NEW STANDARD",
                                         color = TextMuted,
-                                        fontSize = 11.sp,
+                                        fontSize = 15.sp,
                                         fontFamily = SpaceMonoFamily
                                     )
                                 }
@@ -309,7 +309,7 @@ fun OnboardingScreen(
                     Text(
                         text = "CREATE AN ACCOUNT",
                         color = AccentGlow,
-                        fontSize = 11.sp,
+                        fontSize = 15.sp,
                         fontFamily = SpaceMonoFamily,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier

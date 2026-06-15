@@ -119,7 +119,7 @@ fun PremiumBadge(modifier: Modifier = Modifier) {
             text = "PREMIUM",
             color = Color.White,
             fontWeight = FontWeight.Bold,
-            fontSize = 9.sp,
+            fontSize = 13.sp,
             fontFamily = SpaceMonoFamily
         )
     }
@@ -138,7 +138,7 @@ fun FreeBadge(modifier: Modifier = Modifier) {
             text = "FREE",
             color = FreeGreen,
             fontWeight = FontWeight.Bold,
-            fontSize = 9.sp,
+            fontSize = 13.sp,
             fontFamily = SpaceMonoFamily
         )
     }
@@ -242,7 +242,7 @@ fun AnimeCard(
                         Text(
                             text = anime.rating.toString(),
                             color = TextPrimary,
-                            fontSize = 11.sp,
+                            fontSize = 15.sp,
                             fontWeight = FontWeight.Bold,
                             fontFamily = SpaceMonoFamily
                         )
@@ -263,7 +263,7 @@ fun AnimeCard(
                 Text(
                     text = anime.genres.joinToString(" | "),
                     color = TextMuted,
-                    fontSize = 10.sp,
+                    fontSize = 14.sp,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
@@ -379,7 +379,7 @@ fun EpisodeCard(
                             Text(
                                 text = "PREM",
                                 color = PremiumGold,
-                                fontSize = 8.sp,
+                                fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold,
                                 fontFamily = SpaceMonoFamily
                             )
@@ -403,7 +403,7 @@ fun EpisodeCard(
                 Text(
                     text = episode.duration,
                     color = TextMuted,
-                    fontSize = 11.sp,
+                    fontSize = 15.sp,
                     fontFamily = SpaceMonoFamily
                 )
             }
@@ -465,7 +465,7 @@ fun GradientButton(
             Text(
                 text = text.uppercase(),
                 color = TextPrimary,
-                fontSize = 13.sp,
+                fontSize = 17.sp,
                 fontFamily = SpaceMonoFamily,
                 fontWeight = FontWeight.Bold
             )

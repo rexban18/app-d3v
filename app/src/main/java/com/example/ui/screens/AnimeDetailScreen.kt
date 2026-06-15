@@ -224,25 +224,25 @@ fun AnimeDetailScreen(
                                 Text(
                                     text = anime.rating.toString(),
                                     color = TextPrimary,
-                                    fontSize = 12.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    fontFamily = SpaceMonoFamily
-                                )
-                            }
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.Bold,
+                        fontFamily = SpaceMonoFamily
+                    )
+                }
 
-                            Spacer(modifier = Modifier.width(12.dp))
+                Spacer(modifier = Modifier.width(12.dp))
 
-                            // Fan Dub tag
-                            Box(
-                                modifier = Modifier
-                                    .clip(RoundedCornerShape(8.dp))
-                                    .background(BackgroundSurface)
-                                    .padding(horizontal = 10.dp, vertical = 4.dp)
-                            ) {
-                                Text(
-                                    text = "FAN DUB",
-                                    color = TextPrimary,
-                                    fontSize = 10.sp,
+                // Fan Dub tag
+                Box(
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(8.dp))
+                        .background(BackgroundSurface)
+                        .padding(horizontal = 10.dp, vertical = 4.dp)
+                ) {
+                    Text(
+                        text = "FAN DUB",
+                        color = TextPrimary,
+                        fontSize = 14.sp,
                                     fontFamily = SpaceMonoFamily,
                                     fontWeight = FontWeight.Bold
                                 )
@@ -260,7 +260,7 @@ fun AnimeDetailScreen(
                                 Text(
                                     text = "${episodesByAnimeList.size} EPISODES",
                                     color = AccentGlow,
-                                    fontSize = 10.sp,
+                                    fontSize = 14.sp,
                                     fontFamily = SpaceMonoFamily,
                                     fontWeight = FontWeight.Bold
                                 )
@@ -285,7 +285,7 @@ fun AnimeDetailScreen(
                                     Text(
                                         text = genre.uppercase(),
                                         color = TextMuted,
-                                        fontSize = 9.sp,
+                                        fontSize = 13.sp,
                                         fontFamily = SpaceMonoFamily,
                                         fontWeight = FontWeight.Bold
                                     )
@@ -376,7 +376,7 @@ fun AnimeDetailScreen(
                                     color = TextPrimary,
                                     fontFamily = OrbitronFamily,
                                     fontWeight = FontWeight.Bold,
-                                    fontSize = 12.sp,
+                                    fontSize = 16.sp,
                                     letterSpacing = 1.sp
                                 )
 
@@ -389,7 +389,7 @@ fun AnimeDetailScreen(
                                     Text(
                                         text = anime.description,
                                         color = TextPrimary.copy(alpha = 0.8f),
-                                        fontSize = 13.sp,
+                                        fontSize = 17.sp,
                                         lineHeight = 18.sp,
                                         maxLines = if (isDescExpanded) Int.MAX_VALUE else 3,
                                         overflow = TextOverflow.Ellipsis
@@ -404,7 +404,7 @@ fun AnimeDetailScreen(
                                         Text(
                                             text = if (isDescExpanded) "READ LESS" else "READ MORE",
                                             color = AccentGlow,
-                                            fontSize = 9.sp,
+                                            fontSize = 13.sp,
                                             fontFamily = SpaceMonoFamily,
                                             fontWeight = FontWeight.Bold,
                                             modifier = Modifier
@@ -447,7 +447,7 @@ fun AnimeDetailScreen(
                                     .padding(24.dp),
                                 contentAlignment = Alignment.Center
                             ) {
-                                Text("No episodes recorded.", color = TextMuted, fontSize = 12.sp, fontFamily = SpaceMonoFamily)
+                                Text("No episodes recorded.", color = TextMuted, fontSize = 16.sp, fontFamily = SpaceMonoFamily)
                             }
                         }
                     }
@@ -518,7 +518,7 @@ fun AnimeDetailScreen(
                             text = "Unlocks Episode ${selectedLockedEpisode?.epNumber ?: ""}: ${selectedLockedEpisode?.title ?: "Exclusive Access"}",
                             color = TextPrimary,
                             fontWeight = FontWeight.SemiBold,
-                            fontSize = 13.sp,
+                            fontSize = 17.sp,
                             textAlign = TextAlign.Center
                         )
 
@@ -527,7 +527,7 @@ fun AnimeDetailScreen(
                         Text(
                             text = "Upgrade to SahidAnime Premium to stream all exclusive episodes with high-speed ultra-servers and no-ads.",
                             color = TextMuted,
-                            fontSize = 12.sp,
+                            fontSize = 16.sp,
                             textAlign = TextAlign.Center,
                             modifier = Modifier.padding(horizontal = 14.dp)
                         )
@@ -562,7 +562,7 @@ fun AnimeDetailScreen(
                             Text(
                                 text = "REDEEM PROMO CODE",
                                 fontWeight = FontWeight.Bold,
-                                fontSize = 12.sp,
+                                fontSize = 16.sp,
                                 fontFamily = SpaceMonoFamily
                             )
                         }

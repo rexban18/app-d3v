@@ -82,7 +82,7 @@ fun SearchScreen(
                     Text(
                         "ENTER ANIME TITLE OR GENRE...",
                         color = TextMuted,
-                        fontSize = 12.sp,
+                        fontSize = 16.sp,
                         fontFamily = SpaceMonoFamily
                     )
                 },
@@ -126,7 +126,7 @@ fun SearchScreen(
                 Text(
                     text = "RECENT SEARCHES",
                     color = TextMuted,
-                    fontSize = 11.sp,
+                    fontSize = 15.sp,
                     fontFamily = SpaceMonoFamily,
                     fontWeight = FontWeight.Bold
                 )
@@ -149,7 +149,7 @@ fun SearchScreen(
                             Text(
                                 text = tag.uppercase(),
                                 color = TextPrimary,
-                                fontSize = 10.sp,
+                                fontSize = 14.sp,
                                 fontFamily = SpaceMonoFamily,
                                 fontWeight = FontWeight.Bold
                             )
@@ -189,7 +189,7 @@ fun SearchScreen(
                     Text(
                         text = "FIND YOUR NEXT SCI-FI ADVENTURE",
                         color = TextMuted,
-                        fontSize = 11.sp,
+                        fontSize = 15.sp,
                         fontFamily = SpaceMonoFamily
                     )
                 }
@@ -213,7 +213,7 @@ fun SearchScreen(
                     Text(
                         text = "TRY ADJUSTING KEYWORDS",
                         color = TextMuted,
-                        fontSize = 11.sp,
+                        fontSize = 15.sp,
                         fontFamily = SpaceMonoFamily
                     )
                 }

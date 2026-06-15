@@ -125,7 +125,7 @@ fun SplashScreen(
                 color = com.example.ui.theme.TextMuted,
                 fontFamily = OrbitronFamily,
                 fontWeight = FontWeight.Normal,
-                fontSize = 10.sp,
+                fontSize = 14.sp,
                 letterSpacing = 2.sp
             )
         }

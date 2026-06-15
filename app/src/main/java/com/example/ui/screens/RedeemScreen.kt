@@ -132,7 +132,7 @@ fun RedeemScreen(
                     Text(
                         text = "ENTER SECURE CODE FOR BONUS HOURS",
                         color = TextMuted,
-                        fontSize = 9.sp,
+                        fontSize = 13.sp,
                         fontFamily = SpaceMonoFamily,
                         textAlign = TextAlign.Center
                     )
@@ -147,7 +147,7 @@ fun RedeemScreen(
                             Text(
                                 "E.G. SAHID100",
                                 color = TextMuted,
-                                fontSize = 12.sp,
+                                fontSize = 16.sp,
                                 fontFamily = SpaceMonoFamily
                             )
                         },
@@ -169,7 +169,7 @@ fun RedeemScreen(
                     Text(
                         text = "All codes are case-sensitive. Redeemed codes grant instant, non-reversible premium periods.",
                         color = TextMuted,
-                        fontSize = 11.sp,
+                        fontSize = 15.sp,
                         textAlign = TextAlign.Center,
                         lineHeight = 15.sp,
                         modifier = Modifier.padding(horizontal = 10.dp)
@@ -210,7 +210,7 @@ fun RedeemScreen(
                         text = "PROMOTIONAL DEALS",
                         color = AccentPurple,
                         fontFamily = OrbitronFamily,
-                        fontSize = 11.sp,
+                        fontSize = 15.sp,
                         fontWeight = FontWeight.Bold,
                         letterSpacing = 1.sp
                     )
@@ -218,7 +218,7 @@ fun RedeemScreen(
                     Text(
                         text = "Redeem codes are distributed exclusively during seasonal launches, user surveys, or through sponsor groups. Active premium users can still stack bonus days.",
                         color = TextMuted,
-                        fontSize = 11.sp,
+                        fontSize = 15.sp,
                         lineHeight = 16.sp
                     )
                 }
@@ -270,7 +270,7 @@ fun RedeemScreen(
                             Text(
                                 text = "$grantedPromoDays Premium Membership days have been successfully loaded onto your profile.",
                                 color = TextMuted,
-                                fontSize = 12.sp,
+                                fontSize = 16.sp,
                                 textAlign = TextAlign.Center
                             )
                         }

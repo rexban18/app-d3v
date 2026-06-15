@@ -104,7 +104,7 @@ fun PremiumScreen(
                     color = TextPrimary,
                     fontFamily = OrbitronFamily,
                     fontWeight = FontWeight.Normal,
-                    fontSize = 10.sp,
+                    fontSize = 14.sp,
                     letterSpacing = 1.sp
                 )
             }
@@ -127,14 +127,14 @@ fun PremiumScreen(
                         text = "PREMIUM MEMBERSHIP STATUS ACTIVE",
                         color = PremiumGold,
                         fontWeight = FontWeight.Bold,
-                        fontSize = 12.sp,
+                        fontSize = 16.sp,
                         fontFamily = SpaceMonoFamily
                     )
                     Spacer(modifier = Modifier.height(4.dp))
                     Text(
                         text = "All catalog restrictions have been suspended.",
                         color = TextPrimary,
-                        fontSize = 11.sp,
+                        fontSize = 15.sp,
                         textAlign = TextAlign.Center
                     )
                 }
@@ -150,7 +150,7 @@ fun PremiumScreen(
             Text(
                 text = "ACCESS ADVANTAGES",
                 color = TextMuted,
-                fontSize = 11.sp,
+                fontSize = 15.sp,
                 fontFamily = SpaceMonoFamily,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(bottom = 12.dp)
@@ -187,7 +187,7 @@ fun PremiumScreen(
                     Text(
                         text = benefit,
                         color = TextPrimary,
-                        fontSize = 13.sp,
+                        fontSize = 17.sp,
                         fontWeight = FontWeight.Medium
                     )
                 }
@@ -205,7 +205,7 @@ fun PremiumScreen(
             Text(
                 text = "CHOOSE YOUR TIERS PLAN",
                 color = TextMuted,
-                fontSize = 11.sp,
+                fontSize = 15.sp,
                 fontFamily = SpaceMonoFamily,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(bottom = 12.dp)
@@ -253,7 +253,7 @@ fun PremiumScreen(
                                     Text(
                                         text = "${plan.durationDays} DAYS",
                                         color = if (isSelected) PremiumGold else TextMuted,
-                                        fontSize = 9.sp,
+                                        fontSize = 13.sp,
                                         fontFamily = SpaceMonoFamily,
                                         fontWeight = FontWeight.Bold
                                     )
@@ -270,7 +270,7 @@ fun PremiumScreen(
                                 Text(
                                     text = plan.features.firstOrNull() ?: "Full Access Bundle Included",
                                     color = TextMuted,
-                                    fontSize = 11.sp
+                                    fontSize = 15.sp
                                 )
                             }
 
@@ -287,7 +287,7 @@ fun PremiumScreen(
                                 Text(
                                     text = "SECURE PAY",
                                     color = TextMuted,
-                                    fontSize = 9.sp,
+                                    fontSize = 13.sp,
                                     fontFamily = SpaceMonoFamily
                                 )
                             }
@@ -328,7 +328,7 @@ fun PremiumScreen(
             Text(
                 text = "HAVE A COUPON REDEEM CODE?",
                 color = AccentGlow,
-                fontSize = 11.sp,
+                fontSize = 15.sp,
                 fontFamily = SpaceMonoFamily,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier

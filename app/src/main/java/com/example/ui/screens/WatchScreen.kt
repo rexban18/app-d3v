@@ -99,7 +99,7 @@ fun WatchScreen(
                         color = TextPrimary,
                         fontFamily = OrbitronFamily,
                         fontWeight = FontWeight.Bold,
-                        fontSize = 14.sp
+                        fontSize = 18.sp
                     )
                 },
                 navigationIcon = {
@@ -128,7 +128,7 @@ fun WatchScreen(
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(230.dp)
+                        .height(280.dp)
                         .padding(horizontal = 16.dp)
                         .clip(RoundedCornerShape(12.dp))
                         .background(BackgroundCard)
@@ -157,14 +157,14 @@ fun WatchScreen(
                             color = PremiumGold,
                             fontFamily = OrbitronFamily,
                             fontWeight = FontWeight.Bold,
-                            fontSize = 13.sp,
-                            letterSpacing = 1.sp
+                        fontSize = 16.sp,
+                        letterSpacing = 1.sp
                         )
                         Spacer(modifier = Modifier.height(4.dp))
                         Text(
                             text = "Upgrade your catalog tier to continue stream access.",
                             color = TextMuted,
-                            fontSize = 11.sp
+                            fontSize = 14.sp
                         )
                         Spacer(modifier = Modifier.height(14.dp))
                         GradientButton(
@@ -209,14 +209,14 @@ fun WatchScreen(
                                     color = TextPrimary,
                                     fontFamily = OrbitronFamily,
                                     fontWeight = FontWeight.Bold,
-                                    fontSize = 15.sp,
+                                    fontSize = 18.sp,
                                     maxLines = 2
                                 )
                                 Spacer(modifier = Modifier.height(3.dp))
                                 Text(
                                     text = anime.title + " | " + episode.duration,
                                     color = TextMuted,
-                                    fontSize = 11.sp,
+                                    fontSize = 14.sp,
                                     fontFamily = SpaceMonoFamily
                                 )
                             }
@@ -420,7 +420,7 @@ fun VideoPlayerFrame(
         },
         modifier = Modifier
             .fillMaxWidth()
-            .height(230.dp)
+            .height(280.dp)
             .clip(RoundedCornerShape(bottomStart = 20.dp, bottomEnd = 20.dp))
             .background(Color.Black)
     )

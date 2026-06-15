@@ -98,7 +98,7 @@ fun AnimeListScreen(
                 Text(
                     text = "SEARCH DISCOVER TITLES...",
                     color = TextMuted,
-                    fontSize = 12.sp,
+                    fontSize = 16.sp,
                     fontFamily = SpaceMonoFamily
                 )
             }
@@ -127,7 +127,7 @@ fun AnimeListScreen(
                         Text(
                             text = category.uppercase(),
                             color = if (isSelected) TextPrimary else TextMuted,
-                            fontSize = 11.sp,
+                            fontSize = 15.sp,
                             fontFamily = SpaceMonoFamily,
                             fontWeight = FontWeight.Bold
                         )

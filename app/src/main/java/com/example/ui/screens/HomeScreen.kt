@@ -98,7 +98,7 @@ fun HomeScreen(
                     color = AccentPurple,
                     fontFamily = OrbitronFamily,
                     fontWeight = FontWeight.Bold,
-                    fontSize = 24.sp,
+                    fontSize = 28.sp,
                     letterSpacing = 2.sp,
                     modifier = Modifier.graphicsLayer {
                         shadowElevation = 8f
@@ -108,7 +108,7 @@ fun HomeScreen(
                 Text(
                     text = "THE NEW ANIME UNIVERSE",
                     color = TextMuted,
-                    fontSize = 8.sp,
+                    fontSize = 10.sp,
                     fontFamily = SpaceMonoFamily,
                     letterSpacing = 1.sp
                 )
@@ -235,7 +235,7 @@ fun HomeScreen(
                                 Text(
                                     text = "FIRE SYSTEM TRENDING",
                                     color = AccentGlow,
-                                    fontSize = 8.sp,
+                    fontSize = 11.sp,
                                     fontWeight = FontWeight.Bold,
                                     fontFamily = SpaceMonoFamily
                                 )
@@ -248,7 +248,7 @@ fun HomeScreen(
                                 color = TextPrimary,
                                 fontFamily = OrbitronFamily,
                                 fontWeight = FontWeight.Bold,
-                                fontSize = 23.sp,
+                                fontSize = 26.sp,
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis
                             )
@@ -258,10 +258,10 @@ fun HomeScreen(
                             Text(
                                 text = anime.description,
                                 color = TextPrimary.copy(alpha = 0.8f),
-                                fontSize = 11.sp,
-                                maxLines = 2,
-                                overflow = TextOverflow.Ellipsis,
-                                modifier = Modifier.fillMaxWidth(0.85f)
+                    fontSize = 14.sp,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.fillMaxWidth(0.85f)
                             )
 
                             Spacer(modifier = Modifier.height(12.dp))
@@ -286,8 +286,8 @@ fun HomeScreen(
                                     text = "WATCH NOW",
                                     color = TextPrimary,
                                     fontWeight = FontWeight.Bold,
-                                    fontSize = 11.sp,
-                                    fontFamily = SpaceMonoFamily
+                            fontSize = 14.sp,
+                            fontFamily = SpaceMonoFamily
                                 )
                             }
                         }
@@ -431,7 +431,7 @@ fun SectionHeader(
             color = titleColor,
             fontFamily = OrbitronFamily,
             fontWeight = FontWeight.Bold,
-            fontSize = 15.sp,
+            fontSize = 18.sp,
             letterSpacing = 1.sp
         )
         if (showAll) {
@@ -554,7 +554,7 @@ fun ContinueWatchingCard(
                     Text(
                         text = "EPISODE $epNum",
                         color = AccentGlow,
-                        fontSize = 9.sp,
+                        fontSize = 12.sp,
                         fontFamily = SpaceMonoFamily,
                         fontWeight = FontWeight.Bold
                     )

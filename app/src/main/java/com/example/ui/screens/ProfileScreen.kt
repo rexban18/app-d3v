@@ -102,7 +102,7 @@ fun ProfileScreen(
                 Text(
                     text = currentUser?.email ?: "",
                     color = TextMuted,
-                    fontSize = 11.sp,
+                    fontSize = 15.sp,
                     fontFamily = SpaceMonoFamily
                 )
             }
@@ -117,7 +117,7 @@ fun ProfileScreen(
             Text(
                 text = "SWAP COSMIC CLASS PROFILE AVATAR",
                 color = TextMuted,
-                fontSize = 10.sp,
+                fontSize = 14.sp,
                 fontFamily = SpaceMonoFamily,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(bottom = 8.dp)
@@ -148,7 +148,7 @@ fun ProfileScreen(
                         Text(
                             text = role.take(3),
                             color = if (isSelected) TextPrimary else TextMuted,
-                            fontSize = 10.sp,
+                            fontSize = 14.sp,
                             fontFamily = SpaceMonoFamily,
                             fontWeight = FontWeight.Bold
                         )
@@ -177,7 +177,7 @@ fun ProfileScreen(
                         Text(
                             text = "CATALOG MEMBERSHIP TIER",
                             color = TextPrimary,
-                            fontSize = 12.sp,
+                            fontSize = 16.sp,
                             fontWeight = FontWeight.Bold,
                             fontFamily = SpaceMonoFamily
                         )
@@ -192,7 +192,7 @@ fun ProfileScreen(
                                 Text(
                                     text = "PREMIUM",
                                     color = PremiumGold,
-                                    fontSize = 9.sp,
+                                    fontSize = 13.sp,
                                     fontWeight = FontWeight.Bold,
                                     fontFamily = SpaceMonoFamily
                                 )
@@ -207,7 +207,7 @@ fun ProfileScreen(
                                 Text(
                                     text = "FREE ACCOUNT",
                                     color = TextMuted,
-                                    fontSize = 9.sp,
+                                    fontSize = 13.sp,
                                     fontWeight = FontWeight.Bold,
                                     fontFamily = SpaceMonoFamily
                                 )
@@ -225,7 +225,7 @@ fun ProfileScreen(
                     Text(
                         text = subText,
                         color = TextMuted,
-                        fontSize = 11.sp,
+                        fontSize = 15.sp,
                         lineHeight = 15.sp
                     )
 
@@ -252,7 +252,7 @@ fun ProfileScreen(
             Text(
                 text = "COSMIC GUEST SETTINGS",
                 color = TextMuted,
-                fontSize = 10.sp,
+                fontSize = 14.sp,
                 fontFamily = SpaceMonoFamily,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(bottom = 8.dp)
@@ -287,7 +287,7 @@ fun ProfileScreen(
             Text(
                 text = "LOCAL DATABASE (ROOM) CONTROLS",
                 color = TextMuted,
-                fontSize = 10.sp,
+                fontSize = 14.sp,
                 fontFamily = SpaceMonoFamily,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(bottom = 8.dp)
@@ -305,7 +305,7 @@ fun ProfileScreen(
                 Text(
                     text = "STATUS: ${allAnimes.size} ANIME ENTITIES FOUND IN DB",
                     color = TextPrimary,
-                    fontSize = 11.sp,
+                    fontSize = 15.sp,
                     fontFamily = SpaceMonoFamily,
                     fontWeight = FontWeight.Bold
                 )
@@ -373,65 +373,65 @@ fun ProfileScreen(
                         OutlinedTextField(
                             value = animeId,
                             onValueChange = { animeId = it },
-                            label = { Text("Unique Anime ID (e.g. naruto)", color = TextMuted, fontSize = 11.sp) },
+                            label = { Text("Unique Anime ID (e.g. naruto)", color = TextMuted, fontSize = 15.sp) },
                             singleLine = true,
                             colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AccentPurple, unfocusedBorderColor = BorderColor)
                         )
                         OutlinedTextField(
                             value = title,
                             onValueChange = { title = it },
-                            label = { Text("Anime Title", color = TextMuted, fontSize = 11.sp) },
+                            label = { Text("Anime Title", color = TextMuted, fontSize = 15.sp) },
                             singleLine = true,
                             colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AccentPurple, unfocusedBorderColor = BorderColor)
                         )
                         OutlinedTextField(
                             value = poster,
                             onValueChange = { poster = it },
-                            label = { Text("Poster Image URL", color = TextMuted, fontSize = 11.sp) },
+                            label = { Text("Poster Image URL", color = TextMuted, fontSize = 15.sp) },
                             singleLine = true,
                             colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AccentPurple, unfocusedBorderColor = BorderColor)
                         )
                         OutlinedTextField(
                             value = bannerImage,
                             onValueChange = { bannerImage = it },
-                            label = { Text("Banner Image URL", color = TextMuted, fontSize = 11.sp) },
+                            label = { Text("Banner Image URL", color = TextMuted, fontSize = 15.sp) },
                             singleLine = true,
                             colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AccentPurple, unfocusedBorderColor = BorderColor)
                         )
                         OutlinedTextField(
                             value = description,
                             onValueChange = { description = it },
-                            label = { Text("Description", color = TextMuted, fontSize = 11.sp) },
+                            label = { Text("Description", color = TextMuted, fontSize = 15.sp) },
                             colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AccentPurple, unfocusedBorderColor = BorderColor)
                         )
                         OutlinedTextField(
                             value = genres,
                             onValueChange = { genres = it },
-                            label = { Text("Genres (Comma separated)", color = TextMuted, fontSize = 11.sp) },
+                            label = { Text("Genres (Comma separated)", color = TextMuted, fontSize = 15.sp) },
                             singleLine = true,
                             colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AccentPurple, unfocusedBorderColor = BorderColor)
                         )
                         OutlinedTextField(
                             value = rating,
                             onValueChange = { rating = it },
-                            label = { Text("Rating (Double, e.g. 9.5)", color = TextMuted, fontSize = 11.sp) },
+                            label = { Text("Rating (Double, e.g. 9.5)", color = TextMuted, fontSize = 15.sp) },
                             singleLine = true,
                             colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AccentPurple, unfocusedBorderColor = BorderColor)
                         )
                         OutlinedTextField(
                             value = totalEpisodes,
                             onValueChange = { totalEpisodes = it },
-                            label = { Text("Total Episodes Count", color = TextMuted, fontSize = 11.sp) },
+                            label = { Text("Total Episodes Count", color = TextMuted, fontSize = 15.sp) },
                             singleLine = true,
                             colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AccentPurple, unfocusedBorderColor = BorderColor)
                         )
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             Checkbox(checked = isTrending, onCheckedChange = { isTrending = it }, colors = CheckboxDefaults.colors(checkedColor = AccentPurple))
-                            Text("Trending (Home Slider)", color = TextPrimary, fontSize = 11.sp, fontFamily = SpaceMonoFamily)
+                            Text("Trending (Home Slider)", color = TextPrimary, fontSize = 15.sp, fontFamily = SpaceMonoFamily)
                         }
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             Checkbox(checked = isPremium, onCheckedChange = { isPremium = it }, colors = CheckboxDefaults.colors(checkedColor = AccentPurple))
-                            Text("Premium (VIP Streaming)", color = TextPrimary, fontSize = 11.sp, fontFamily = SpaceMonoFamily)
+                            Text("Premium (VIP Streaming)", color = TextPrimary, fontSize = 15.sp, fontFamily = SpaceMonoFamily)
                         }
                     }
                 },
@@ -498,9 +498,9 @@ fun ProfileScreen(
                         modifier = Modifier.verticalScroll(rememberScrollState()),
                         verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
-                        Text("Existing Anime IDs in database:", color = TextMuted, fontSize = 10.sp, fontFamily = SpaceMonoFamily)
+                        Text("Existing Anime IDs in database:", color = TextMuted, fontSize = 14.sp, fontFamily = SpaceMonoFamily)
                         if (allAnimes.isEmpty()) {
-                            Text("No Anime found. Add Anime first!", color = DangerRed, fontSize = 11.sp)
+                            Text("No Anime found. Add Anime first!", color = DangerRed, fontSize = 15.sp)
                         } else {
                             Row(
                                 modifier = Modifier
@@ -518,7 +518,7 @@ fun ProfileScreen(
                                             .clickable { selectedAnimeId = item.animeId }
                                             .padding(horizontal = 8.dp, vertical = 4.dp)
                                     ) {
-                                        Text(item.animeId, color = TextPrimary, fontSize = 10.sp, fontFamily = SpaceMonoFamily)
+                                        Text(item.animeId, color = TextPrimary, fontSize = 14.sp, fontFamily = SpaceMonoFamily)
                                     }
                                 }
                             }
@@ -527,41 +527,41 @@ fun ProfileScreen(
                         OutlinedTextField(
                             value = selectedAnimeId,
                             onValueChange = { selectedAnimeId = it },
-                            label = { Text("Target Anime ID", color = TextMuted, fontSize = 11.sp) },
+                            label = { Text("Target Anime ID", color = TextMuted, fontSize = 15.sp) },
                             singleLine = true,
                             colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AccentPurple, unfocusedBorderColor = BorderColor)
                         )
                         OutlinedTextField(
                             value = epNumber,
                             onValueChange = { epNumber = it },
-                            label = { Text("Episode Number (Int, e.g. 1)", color = TextMuted, fontSize = 11.sp) },
+                            label = { Text("Episode Number (Int, e.g. 1)", color = TextMuted, fontSize = 15.sp) },
                             singleLine = true,
                             colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AccentPurple, unfocusedBorderColor = BorderColor)
                         )
                         OutlinedTextField(
                             value = epTitle,
                             onValueChange = { epTitle = it },
-                            label = { Text("Episode Title (Optional)", color = TextMuted, fontSize = 11.sp) },
+                            label = { Text("Episode Title (Optional)", color = TextMuted, fontSize = 15.sp) },
                             singleLine = true,
                             colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AccentPurple, unfocusedBorderColor = BorderColor)
                         )
                         OutlinedTextField(
                             value = duration,
                             onValueChange = { duration = it },
-                            label = { Text("Duration (e.g. 24:15)", color = TextMuted, fontSize = 11.sp) },
+                            label = { Text("Duration (e.g. 24:15)", color = TextMuted, fontSize = 15.sp) },
                             singleLine = true,
                             colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AccentPurple, unfocusedBorderColor = BorderColor)
                         )
                         OutlinedTextField(
                             value = videoUrl,
                             onValueChange = { videoUrl = it },
-                            label = { Text("Video Stream Link (MP4 or HLS m3u8 URL)", color = TextMuted, fontSize = 11.sp) },
+                            label = { Text("Video Stream Link (MP4 or HLS m3u8 URL)", color = TextMuted, fontSize = 15.sp) },
                             singleLine = true,
                             colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AccentPurple, unfocusedBorderColor = BorderColor)
                         )
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             Checkbox(checked = isFree, onCheckedChange = { isFree = it }, colors = CheckboxDefaults.colors(checkedColor = AccentPurple))
-                            Text("Free (Non-premium tier users can watch)", color = TextPrimary, fontSize = 11.sp, fontFamily = SpaceMonoFamily)
+                            Text("Free (Non-premium tier users can watch)", color = TextPrimary, fontSize = 15.sp, fontFamily = SpaceMonoFamily)
                         }
                     }
                 },
@@ -619,7 +619,7 @@ fun ProfileScreen(
                     Text(
                         "Are you absolutely sure you want to clear all custom anime listings and stream video databases inside Room? This action cannot be undone.",
                         color = TextMuted,
-                        fontSize = 12.sp
+                        fontSize = 16.sp
                     )
                 },
                 confirmButton = {
@@ -685,14 +685,14 @@ fun ProfileItemAction(
             Text(
                 text = label,
                 color = TextPrimary,
-                fontSize = 11.sp,
+                fontSize = 15.sp,
                 fontFamily = SpaceMonoFamily,
                 fontWeight = FontWeight.Bold
             )
             Text(
                 text = subLabel,
                 color = TextMuted,
-                fontSize = 10.sp,
+                fontSize = 14.sp,
                 lineHeight = 13.sp
             )
         }
