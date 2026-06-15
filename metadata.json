@@ -1,0 +1,6 @@
+{
+  "name": "SahidAnime",
+  "description": "Comprehensive anime streaming client styled with Liquid Glass UI. Stream, browse, and premium memberships.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

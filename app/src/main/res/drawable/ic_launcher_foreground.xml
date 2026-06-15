@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Glowing outer circular/hexagonal ring -->
+    <path
+        android:strokeWidth="3.5"
+        android:strokeColor="#7C3AED"
+        android:fillColor="#111118"
+        android:pathData="M 54 24 L 80 39 L 80 69 L 54 84 L 28 69 L 28 39 Z" />
+
+    <!-- Gold Accent inner diamond -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M 54 36 L 69 54 L 54 72 L 39 54 Z" />
+
+    <!-- Pure Play Triangle inside -->
+    <path
+        android:fillColor="#F1F5F9"
+        android:pathData="M 47 44 L 47 64 L 65 54 Z" />
+
+</vector>
